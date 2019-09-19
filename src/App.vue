@@ -1,29 +1,63 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <Cover></Cover>
+    <v-app>
+      <v-content>
+        <About></About>
+        <Skill></Skill>
+        <Contact></Contact>
+        <div style="height:200px"></div>
+      </v-content>
+    </v-app>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Cover from "@/components/Cover.vue";
+import About from "@/components/About.vue";
+import Skill from "@/components/Skill.vue";
+import Contact from "@/components/Contact.vue";
+export default {
+  name: "App",
+  components: {
+    Cover,
+    About,
+    Skill,
+    Contact
+  },
+  data: () => ({
+    show: true
+  })
+};
+</script>
+
+<style >
+@import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
+/* font-family: "Acme", sans-serif; */
+html {
+  --ff: "Acme", sans-serif;
+  scroll-behavior: smooth;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+
+.customized-tag {
+  text-align: center;
+  font-family: var(--ff);
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.customized-font {
+  font-family: var(--ff);
+}
+.customized-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+.text-border {
+  letter-spacing: 3px;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 </style>
