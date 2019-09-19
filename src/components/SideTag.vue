@@ -9,7 +9,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.side-tag {
+.customized-tag {
   text-align: center;
   font-family: var(--ff);
   font-size: 50px;
