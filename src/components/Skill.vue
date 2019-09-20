@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container style="padding-bottom:0">
     <h1 class="customized-tag mt-12" id="skill">Skill</h1>
     <v-row justify="center">
       <v-col justify="center" class="text-center" cols="12" md="12" lg="12">
@@ -53,7 +53,7 @@
             <strong class="sub-title-1">Vuetify</strong>
             <p
               class="mb-0 indent"
-            >Vuetify is a Material Design component framework for Vue.js, which provides excellent UI component and its own grid system for Responsive Web Design (RWD).</p>
+            >Vuetify is a Material Design component framework for Vue.js, which provides excellent UI components and its own grid system for Responsive Web Design (RWD).</p>
             <p
               class="mb-0 indent"
             >The current page is built with vuetify. Try resize the screen to see the RWD behavior.</p>

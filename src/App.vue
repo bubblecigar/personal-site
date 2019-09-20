@@ -6,7 +6,6 @@
         <About></About>
         <Skill></Skill>
         <Contact></Contact>
-        <div style="height:200px"></div>
       </v-content>
     </v-app>
   </div>
