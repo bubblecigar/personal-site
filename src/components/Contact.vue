@@ -18,14 +18,26 @@
             <v-spacer></v-spacer>
           </v-card-title>
           <v-card-text>
-            <a href="mailto: bubblecigar@gmail.com" style="text-decoration:none">
-              <v-icon>mail</v-icon>
+            <a class="contact-link" href="mailto: bubblecigar@gmail.com">
+              <v-icon>far fa-envelope</v-icon>
+            </a>
+            <a
+              class="contact-link"
+              target="_BLANK"
+              href="https://github.com/bubblecigar/personal-site"
+            >
+              <v-icon>fab fa-github</v-icon>
+            </a>
+            <a class="contact-link" target="_BLANK" href="https://www.instagram.com/bubblecigar/">
+              <v-icon>fab fa-instagram</v-icon>
             </a>
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
-    <div class="pa-12"></div>
+    <div class="pa-12 mb-12 footer">
+      <h2 class="main-title2" :class="{leave:visibility<.61}">Looking for a front end job</h2>
+    </div>
   </v-container>
 </template>
 
@@ -83,5 +95,30 @@ h2 {
 }
 .wrapper {
   position: absolute;
+}
+.contact-link {
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+.main-title2 {
+  font-size: 18px;
+  font-weight: initial;
+  text-align: center;
+  font-family: var(--ff);
+  animation: blink infinite 3s ease-in-out;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.footer {
+  margin-top: auto;
 }
 </style>

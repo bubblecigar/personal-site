@@ -44,6 +44,7 @@ export default {
       controls.target.set(0, 0, 0);
       controls.update();
       controls.enableZoom = false;
+      controls.enableKeys = false;
 
       // set light
       const color = 0xffffff;

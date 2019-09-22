@@ -14,23 +14,23 @@
             <strong class="sub-title-1">1991-</strong>
             <p
               class="mb-0 indent"
-            >I was born in America and raised in Taiwan. Now I am 27 years old and live in Taipei.</p>
+            >I was born in America and raised in Taiwan. I am currently 27 years old and live in Taipei.</p>
           </v-card-text>
           <v-card-text class="text-left pt-0">
             <strong class="sub-title-1">2010-2016</strong>
             <p class="mb-0 indent">
-              I had finished bachelor and master degrees of
-              <strong>physics</strong> in NTU. Studying of fundamental science granted me a better mathematics sense, which turned out to be an advantage on almost everything. In front end technology for example, there was linear algebra in WebGL and shaping functions in GLSL. I could see math make its own presence on the canvas, and it was the reason why I like computer science.
+              I finished my bachelor and master degrees in
+              <strong>physics</strong> at NTU. Studying fundamental science allowed me to have a better sense in mathematics, which turned out to be advantageous in almost everything. In front-end technology, for example, linear algebra is needed in WebGL and for shaping functions in GLSL. I saw math making its presence on the canvas, and for that reason I found computer science to be an interesting field.
             </p>
           </v-card-text>
           <v-card-text class="text-left pt-0">
             <strong class="sub-title-1">2017-2019</strong>
             <p class="mb-0 indent">
               After graduation, I got my first job as a
-              <strong>patent engineer</strong> in TLC. As a patent engineer, I regularly visited our clients to discuss technology details with inventors, and drafted invention specification on my duty. I was assigned to handle patent applications for companies like AUO(友達), Delta(台達), Canon(佳能), and so on. I had to deal with a variety of fields including semiconductor device, liquid crystal display, projector, camera, laser, circuits, and sometimes even algorithm. Most of the fields were new to me, and it was the challenge of the job - you should get along with the unfamiliarity and learn fast.
+              <strong>patent engineer</strong> at TLC. As part of my responsibility, I regularly visited clients in order to discuss technology details with the inventors, and drafted invention specification. I was assigned to handle patent applications for companies like AUO(友達), Delta(台達), Canon(佳能), and so on. I had to work with technologies in a variety of fields, including semiconductor device, liquid crystal display, projector, camera, laser, circuits, and sometimes even algorithm. Most of these fields were new to me, but that was the challenge of the job - you must accept the unfamiliarity and learn fast.
             </p>
             <p class="mb-0 indent">
-              In addition to the regularly visiting, I was doing massively reading and writing in daily work. Two years of accumulation sharpened my language ability, both English (
+              In addition to regularly visiting clients, I was reading and writing extensively on the job every day. Two years of practice sharpened my language ability in both English (
               <strong>IELTS 7.5</strong>) and Chinese.
             </p>
           </v-card-text>
@@ -38,7 +38,7 @@
             <strong class="sub-title-1">2019-</strong>
             <p
               class="mb-0 indent"
-            >Although having a positive working experience in TLC, I was confused if I would like to dedicate my whole life in the area of law. To solve my confusion, I made my attempt to learn coding, to see if it would be an option for my future career. Soon after I installed my Visual Studio Code editor and built some application, I decided that I love creating stuff more than interpreting concepts between science and law. I quit in March and started my vacation. After some rest and learning, now I am ready to go.</p>
+            >Although I had a positive experience working at TLC, I was unsure as to whether I wanted to dedicate my life to the field of law. To resolve my confusion, I made my attempt to learn coding. I wanted to see if it would be an option for my future career. Soon after I installed my Visual Studio Code editor and built a few applications, I decided that I love to create more than to interpret concepts between science and law. I left TLC in March and started my vacation. After some resting and learning, I am ready to go.</p>
           </v-card-text>
         </v-card>
       </v-col>

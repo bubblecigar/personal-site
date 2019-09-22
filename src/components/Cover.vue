@@ -1,10 +1,5 @@
 <template>
   <div class="parallax" :id="id">
-    <!-- <div class="title" id="observed-title">
-      <h1 class="main-title" :class="{leave:visibility<.9}">Hi,</h1>
-      <h1 class="main-title" :class="{leave:visibility<.5}">I am Roy.</h1>
-    </div>-->
-
     <div class="title2" id="observed-title">
       <h1 class="main-title2" :class="{leave:visibility<.90}">Hi, I am Roy.</h1>
       <h2 class="main-title2" :class="{leave:visibility<.61}">
@@ -19,7 +14,7 @@
     <div class="toolbar-wrapper">
       <div class="toolbar">
         <a class="item" href="#about">ABOUT</a>
-        <a class="item" href="#skill">SKILL</a>
+        <a class="item" href="#skill">SKILLS</a>
         <a class="item" href="#contact">CONTACT</a>
       </div>
       <div class="shadow-line"></div>
@@ -30,7 +25,7 @@
       </div>
       <div class="toolbar">
         <a class="item" href="#about">ABOUT</a>
-        <a class="item" href="#skill">SKILL</a>
+        <a class="item" href="#skill">SKILLS</a>
         <a class="item" href="#contact">CONTACT</a>
       </div>
       <div class="shadow-line"></div>
