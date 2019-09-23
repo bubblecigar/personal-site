@@ -1,7 +1,7 @@
 <template>
   <v-container id="contact-observe" style="min-height:100vh; overflow:hidden; position:relative; ">
-    <img class="deco-image" src="@/assets/end-icon.png" :style="transform" alt />
-    <img class="deco-image2" src="@/assets/end-icon.png" :style="transform2" alt />
+    <img class="deco-image" src="@/assets/end-icon.png" :style="transform3" alt />
+    <img class="deco-image2" src="@/assets/end-icon.png" :style="transform4" alt />
     <h1 class="customized-tag mt-12 mb-12" id="contact">Contact</h1>
     <v-row justify="center">
       <div class="wrapper">
@@ -45,33 +45,52 @@
 import Three from "@/components/Three.vue";
 export default {
   mounted() {
-    const thresholds = [];
-    for (let i = 0; i < 101; i++) {
-      thresholds.push(i / 100);
-    }
-
-    const callback = e => {
-      this.visibility = e[0].intersectionRatio;
-    };
-    const observer = new IntersectionObserver(callback, {
-      threshold: thresholds
+    window.addEventListener("scroll", e => {
+      this.scrollY = window.scrollY;
     });
-    observer.observe(document.querySelector("#contact-observe"));
+
+    this.documentheight = document.body.scrollHeight;
+    this.contactHeight = document.querySelector(
+      "#contact-observe"
+    ).offsetHeight;
+
+    window.addEventListener("resize", e => {
+      this.documentheight = document.body.scrollHeight;
+      this.contactHeight = document.querySelector(
+        "#contact-observe"
+      ).offsetHeight;
+    });
   },
   components: {
     Three
   },
   computed: {
-    transform() {
-      return `transform: rotate(${120 + 60 * this.visibility}deg);`;
+    visibility() {
+      return this.documentheight - this.scrollY - this.contactHeight;
     },
-    transform2() {
-      return `transform: rotate(${-90 + 90 * this.visibility}deg);`;
+    remain() {
+      return this.documentheight - this.scrollY;
+    },
+    percentage() {
+      const per = 2 - (this.documentheight - this.scrollY) / this.contactHeight;
+      if (per <= 0) {
+        return 0;
+      }
+      return per;
+    },
+    transform3() {
+      return `transform: rotate(${120 + 60 * this.percentage}deg);`;
+    },
+    transform4() {
+      return `transform: rotate(${-90 + 90 * this.percentage}deg);`;
     }
   },
   data() {
     return {
-      visibility: 0
+      // visibility: 0,
+      scrollY: 0,
+      documentheight: 0,
+      contactHeight: 0
     };
   }
 };

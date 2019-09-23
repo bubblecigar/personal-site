@@ -9,7 +9,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 Vue.config.productionTip = false;
 
 new Vue({
-  // router,
+  router,
   store,
   vuetify,
   render: h => h(App)

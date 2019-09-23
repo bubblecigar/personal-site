@@ -1,32 +1,12 @@
 <template>
   <div>
-    <Cover></Cover>
-    <v-app>
-      <v-content>
-        <About></About>
-        <Skill></Skill>
-        <Contact></Contact>
-      </v-content>
-    </v-app>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Cover from "@/components/Cover.vue";
-import About from "@/components/About.vue";
-import Skill from "@/components/Skill.vue";
-import Contact from "@/components/Contact.vue";
 export default {
-  name: "App",
-  components: {
-    Cover,
-    About,
-    Skill,
-    Contact
-  },
-  data: () => ({
-    show: true
-  })
+  name: "App"
 };
 </script>
 

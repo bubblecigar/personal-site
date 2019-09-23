@@ -39,7 +39,11 @@ export default {
     window.addEventListener("scroll", e => {
       this.scrollY = window.scrollY;
     });
+
     this.documentheight = document.body.scrollHeight;
+    window.addEventListener("resize", e => {
+      this.documentheight = document.body.scrollHeight;
+    });
 
     const thresholds = [];
     for (let i = 0; i < 101; i++) {
