@@ -1,10 +1,14 @@
 <template>
   <div class="parallax" :id="id">
     <div class="title2" id="observed-title">
-      <h1 class="main-title2" :class="{leave:visibility<.90}">Hi, I am Roy.</h1>
+      <h1 class="main-title2" :class="{leave:visibility<.90}">{{greeting}}</h1>
       <h2 class="main-title2" :class="{leave:visibility<.61}">
-        Welcome to my place
-        <v-icon>keyboard_arrow_down</v-icon>
+        <a @click="toEng" :class="{disabled: lang==='English'}" style="letter-spacing: 1px;">English</a> /
+        <a
+          @click="toCN"
+          :class="{disabled: lang==='Chinese'}"
+          style="font-weight:bold; letter-spacing: 0px;"
+        >中文</a>
       </h2>
     </div>
     <div class="img" :style="transform">
@@ -13,9 +17,9 @@
     </div>
     <div class="toolbar-wrapper">
       <div class="toolbar">
-        <a class="item" href="#about">ABOUT</a>
-        <a class="item" href="#skill">SKILLS</a>
-        <a class="item" href="#contact">CONTACT</a>
+        <a class="item" @click="toElement('about')">{{about}}</a>
+        <a class="item" @click="toElement('skill')">{{skills}}</a>
+        <a class="item" @click="toElement('contact')">{{contact}}</a>
       </div>
       <div class="shadow-line"></div>
     </div>
@@ -24,9 +28,9 @@
         <img src="@/assets/1511-left.jpg" alt />
       </div>
       <div class="toolbar">
-        <a class="item" href="#about">ABOUT</a>
-        <a class="item" href="#skill">SKILLS</a>
-        <a class="item" href="#contact">CONTACT</a>
+        <a class="item" @click="toElement('about')">{{about}}</a>
+        <a class="item" @click="toElement('skill')">{{skills}}</a>
+        <a class="item" @click="toElement('contact')">{{contact}}</a>
       </div>
       <div class="shadow-line"></div>
     </div>
@@ -57,6 +61,8 @@ export default {
       threshold: thresholds
     });
     observer.observe(document.querySelector("#observed-title"));
+
+    this.lang = this.$router.currentRoute.name;
   },
   props: {
     id: {
@@ -74,7 +80,8 @@ export default {
     return {
       scrollY: 0,
       documentheight: 0,
-      visibility: 0
+      visibility: 0,
+      lang: undefined
     };
   },
   computed: {
@@ -97,6 +104,48 @@ export default {
     offset() {
       const percentage = this.lock / this.documentheight;
       return `transform:translateY(-${percentage * 80}%)`;
+    },
+    greeting() {
+      if (this.lang === "Chinese") {
+        return "Hi, I am Ruei-Yu.";
+      }
+      return "Hi, I am Roy.";
+    },
+    about() {
+      if (this.lang === "Chinese") {
+        return "簡歷";
+      }
+      return "ABOUT";
+    },
+    skills() {
+      if (this.lang === "Chinese") {
+        return "技能";
+      }
+      return "SKILLS";
+    },
+    contact() {
+      if (this.lang === "Chinese") {
+        return "聯絡方式";
+      }
+      return "CONTACT";
+    }
+  },
+  methods: {
+    toElement(id) {
+      const selector = "#" + id;
+      document.querySelector(selector).scrollIntoView(true);
+    },
+    toEng() {
+      this.$router.push("/").catch(err => {
+        console.log(err);
+      });
+      this.lang = "English";
+    },
+    toCN() {
+      this.$router.push("/cn").catch(err => {
+        console.log(err);
+      });
+      this.lang = "Chinese";
     }
   }
 };
@@ -148,13 +197,23 @@ export default {
     font-size: 18px;
     font-weight: initial;
     text-align: center;
-    animation: blink infinite 3s ease-in-out;
+    color: rgb(150, 150, 150);
   }
 
   h1,
   h2 {
     transition: transform 1s, opacity 1s;
   }
+  a {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.disabled {
+  color: black;
+  animation: blink infinite 1.5s ease-in-out;
+  pointer-events: none;
 }
 @keyframes blink {
   0% {

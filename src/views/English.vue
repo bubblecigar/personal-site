@@ -1,14 +1,11 @@
 <template>
-  <div>
-    <Cover></Cover>
-    <v-app>
-      <v-content>
-        <About></About>
-        <Skill></Skill>
-        <Contact></Contact>
-      </v-content>
-    </v-app>
-  </div>
+  <v-app>
+    <v-content>
+      <About></About>
+      <Skill></Skill>
+      <Contact></Contact>
+    </v-content>
+  </v-app>
 </template>
 
 <script>

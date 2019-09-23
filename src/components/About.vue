@@ -14,7 +14,7 @@
             <strong class="sub-title-1">1991-</strong>
             <p
               class="mb-0 indent"
-            >I was born in America and raised in Taiwan. I am currently 27 years old and live in Taipei.</p>
+            >My name is Roy Wang (王瑞瑜). I was born in America and raised in Taiwan. I am currently 27 years old and live in Taipei.</p>
           </v-card-text>
           <v-card-text class="text-left pt-0">
             <strong class="sub-title-1">2010-2016</strong>
@@ -78,7 +78,7 @@
             <strong class="sub-title-1">2017-2019</strong>
             <p
               class="mb-0 indent"
-            >Patent engineer in Tsai Lee & Chen Patent Attorneys & Attorneys at Law (連邦法律事務所).</p>
+            >Patent engineer in Tsai Lee & Chen Patent Attorneys & Attorneys at Law (連邦專利事務所).</p>
           </v-card-text>
         </v-card>
       </v-col>

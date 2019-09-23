@@ -1,12 +1,36 @@
 <template>
   <div>
+    <Cover></Cover>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Cover from "@/components/Cover.vue";
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    Cover
+  },
+  methods: {
+    toEng() {
+      this.$router.push("/").catch(err => {
+        console.log(err);
+      });
+      this.lang = "English";
+    },
+    toCN() {
+      this.$router.push("/cn").catch(err => {
+        console.log(err);
+      });
+      this.lang = "Chinese";
+    }
+  },
+  data() {
+    return {
+      lang: "English"
+    };
+  }
 };
 </script>
 

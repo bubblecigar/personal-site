@@ -35,7 +35,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <div class="pa-12 mb-12 footer">
+    <div class="pa-12 my-12 footer">
       <h2 class="main-title2" :class="{leave:visibility<.61}">Looking for a front end job</h2>
     </div>
   </v-container>
@@ -44,22 +44,30 @@
 <script>
 import Three from "@/components/Three.vue";
 export default {
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.updateScroll);
+    window.removeEventListener("resize", this.updateHeight);
+  },
   mounted() {
-    window.addEventListener("scroll", e => {
+    const updateScroll = e => {
       this.scrollY = window.scrollY;
-    });
+    };
+    this.updateScroll = updateScroll; // register for removal
+    window.addEventListener("scroll", updateScroll);
 
     this.documentheight = document.body.scrollHeight;
     this.contactHeight = document.querySelector(
       "#contact-observe"
     ).offsetHeight;
 
-    window.addEventListener("resize", e => {
+    const updateHeight = e => {
       this.documentheight = document.body.scrollHeight;
       this.contactHeight = document.querySelector(
         "#contact-observe"
       ).offsetHeight;
-    });
+    };
+    this.updateHeight = updateHeight; // register for removal
+    window.addEventListener("resize", updateHeight);
   },
   components: {
     Three
@@ -90,7 +98,9 @@ export default {
       // visibility: 0,
       scrollY: 0,
       documentheight: 0,
-      contactHeight: 0
+      contactHeight: 0,
+      updateHeight: undefined,
+      updateScroll: undefined
     };
   }
 };
