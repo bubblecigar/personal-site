@@ -7,9 +7,12 @@
           <v-card-title>
             <v-icon class="mr-4">book</v-icon>自傳
           </v-card-title>
-          <v-avatar size="200px" color="rgba(0,0,0,.2)" class="ma-12 float-sm-right">
-            <img src="https://source.unsplash.com/random" alt />
-          </v-avatar>
+          <v-img
+            alt="photo"
+            class="mt-12 mb-8 mx-auto ma-sm-12 float-sm-right"
+            src="@/assets/photo.jpg"
+            width="200"
+          ></v-img>
           <v-card-text class="text-left">
             <strong class="sub-title-1">1991-</strong>
             <p class="mb-0 indent">我叫王瑞瑜，美國出生，台灣長大，現居台北，二七有餘。</p>
