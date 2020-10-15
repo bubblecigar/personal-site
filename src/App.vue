@@ -50,6 +50,15 @@ html {
   letter-spacing: 3px;
 }
 
+.customized-time-tag {
+  text-align: center;
+  font-family: var(--ff);
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: lightgray;
+}
+
 .customized-font {
   font-family: var(--ff);
 }
