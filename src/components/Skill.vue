@@ -18,7 +18,7 @@
           </v-card-text>
           <v-card-text class="text-left pt-0">
             <strong class="sub-title-1">Redux</strong>
-            <p class="mb-0 indent">Facilitate centralized design pattern with Redux.</p>
+            <p class="mb-0 indent">Centralize requests and data management.</p>
           </v-card-text>
           <v-card-text class="text-left pt-0">
             <strong class="sub-title-1">React-Router</strong>
