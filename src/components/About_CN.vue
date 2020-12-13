@@ -15,7 +15,7 @@
           ></v-img>
           <v-card-text class="text-left">
             <strong class="sub-title-1">1991-</strong>
-            <p class="mb-0 indent">我叫王瑞瑜，美國出生，台灣長大，現居台北，二七有餘。</p>
+            <p class="mb-0 indent">我叫王瑞瑜，美國出生，台灣長大，現居台北，二八有餘。</p>
           </v-card-text>
           <v-card-text class="text-left pt-0">
             <strong class="sub-title-1">2010-2016</strong>
@@ -27,17 +27,25 @@
             <strong class="sub-title-1">2017-2019</strong>
             <p
               class="mb-0 indent"
-            >畢業後，我到連邦專利事務所擔任專利工程師，這是我的第一份正職工作。作為專利工程師，我會定期至科技廠與發明人洽談技術細節，並撰寫發明說明書。我被指派負責友達、台達、佳能等等科技廠的專利案件申請。協助處理的專利領域很廣，包含半導體元件、液晶顯示器、投影機、攝像機、雷射、電子電路、甚或演算法都有可能。上述大部分的領域對我而言都很新，但這也是專利工作的一貫挑戰以及樂趣：時時刻刻去面對不熟悉的領域，並快速學習以跟上現有技術。</p>
+            >畢業後，我到連邦專利事務所擔任，<strong>專利工程師</strong>，這是我的第一份正職工作。作為專利工程師，我會定期至科技廠與發明人洽談技術細節，並撰寫發明說明書。我被指派負責友達、台達、佳能等等科技廠的專利案件申請。協助處理的專利領域很廣，包含半導體元件、液晶顯示器、投影機、攝像機、雷射、電子電路、甚或演算法都有可能。上述大部分的領域對我而言都很新，但這也是專利工作的一貫挑戰以及樂趣：時時刻刻去面對不熟悉的領域，並快速學習以跟上現有技術。</p>
             <p
               class="mb-0 indent"
-            >除了定期拜訪客戶外，每日的例行公事則包含了大量的閱讀以及文字產出。兩年的實務經驗讓我擁有良好的語言能力，不論是英文（雅思 7.5）還是中文。</p>
+            >除了定期拜訪客戶外，每日的例行公事則包含了大量的閱讀以及文字產出。兩年的實務經驗讓我擁有良好的語言能力，不論是英文<strong>（雅思 7.5）</strong>還是中文。</p>
           </v-card-text>
           <v-card-text class="text-left pt-0">
             <strong class="sub-title-1">2019-</strong>
             <p
               class="mb-0 indent"
-            >雖然在連邦工作時有很正面的工作經驗，但隨著日子推移，我開始思索是否要以專利工作作為一生職志。與其在原地猶豫，我決定直接困惑化為行動，開始嘗試學習程式語言，來摸索不同的職涯方向。我安裝了 Visual Studio Code 並寫了一些應用後，我旋即發現相比於專利工作在技術與法律之間周旋，我更熱衷於從無到有的創造。我在三月的時候離開事務所，並給自己放了一段長假。在一陣子的休息以及學習後，我已經準備好面對接下來的挑戰。</p>
+            >雖然在連邦工作時有很正面的工作經驗，但隨著日子推移，我開始思索是否要以專利工作作為一生職志。我開始嘗試學習程式語言，來摸索不同的人生方向。</p>
           </v-card-text>
+          <v-card-text class="text-left pt-0">
+          <strong class="sub-title-1">2019-2020</strong>
+          <p
+            class="mb-0 indent"
+          >
+            感謝網路世界取之不盡的學習資源，經過幾個月的自學，我成為了 H2o 的<strong>前端工程師</strong>。 H2o 是為獸醫產業提供網頁應用的新創公司。我們提供的服務包含資料備份、線上內容管理以及遠端咨詢服務等。我們產品所使用的技術包含 React (Redux、styled-components)、Node (express)、PostgreSQL，以及開發工具如 git、jest、webpack。
+          </p>
+        </v-card-text>
         </v-card>
       </v-col>
       <v-col justify="center" class="text-center" cols="12" sm="6">
@@ -67,6 +75,10 @@
           <v-card-text class="text-left pt-0">
             <strong class="sub-title-1">2017-2019</strong>
             <p class="mb-0 indent">連邦專利事務所專利工程師。</p>
+          </v-card-text>
+          <v-card-text class="text-left pt-0">
+            <strong class="sub-title-1">2019-2020</strong>
+            <p class="mb-0 indent">H2o 前端工程師。</p>
           </v-card-text>
         </v-card>
       </v-col>
