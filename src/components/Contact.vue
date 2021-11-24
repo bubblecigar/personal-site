@@ -50,12 +50,13 @@ export default {
   },
   mounted() {
     const updateScroll = e => {
+      this.documentheight = document.body.scrollHeight;
       this.scrollY = window.scrollY;
     };
     this.updateScroll = updateScroll; // register for removal
+    updateScroll();
     window.addEventListener("scroll", updateScroll);
 
-    this.documentheight = document.body.scrollHeight;
     this.contactHeight = document.querySelector(
       "#contact-observe"
     ).offsetHeight;

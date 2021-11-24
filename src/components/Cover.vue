@@ -11,14 +11,14 @@
         >中文</a>
       </h2>
     </div>
-    <div class="img" :style="transform">
-      <img src="@/assets/1511.jpg" alt />
+    <div class="img" :style="parallaxStyle">
+      <img src="@/assets/1511.jpg" alt style />
       <img class="hero-icon" src="@/assets/birds.png" alt />
     </div>
     <div class="toolbar-wrapper">
       <div class="toolbar">
         <a class="item" @click="toElement('about')">{{about}}</a>
-        <a class="item" @click="toElement('skill')">{{skills}}</a>
+        <a class="item" @click="toElement('portfolio')">{{portfolio}}</a>
         <a class="item" @click="toElement('contact')">{{contact}}</a>
       </div>
       <div class="shadow-line"></div>
@@ -29,7 +29,7 @@
       </div>
       <div class="toolbar">
         <a class="item" @click="toElement('about')">{{about}}</a>
-        <a class="item" @click="toElement('skill')">{{skills}}</a>
+        <a class="item" @click="toElement('portfolio')">{{portfolio}}</a>
         <a class="item" @click="toElement('contact')">{{contact}}</a>
       </div>
       <div class="shadow-line"></div>
@@ -48,6 +48,16 @@ export default {
     window.addEventListener("resize", e => {
       this.documentheight = document.body.scrollHeight;
     });
+
+    const parallaxBG = document.querySelector("#parallax-bg");
+    const updateTransformValue = () => {
+      const target = this.scrollY * this.speed * 0.01;
+      const delta = target - this.translateY;
+      this.translateY += delta / 5;
+
+      requestAnimationFrame(updateTransformValue);
+    };
+    updateTransformValue();
 
     const thresholds = [];
     for (let i = 0; i < 101; i++) {
@@ -79,6 +89,7 @@ export default {
   data() {
     return {
       scrollY: 0,
+      translateY: 0,
       documentheight: 0,
       visibility: 0,
       lang: undefined
@@ -105,6 +116,12 @@ export default {
       const percentage = this.lock / this.documentheight;
       return `transform:translateY(-${percentage * 80}%)`;
     },
+    parallaxStyle() {
+      return {
+        position: "fixed",
+        top: `${-this.translateY}px`
+      };
+    },
     greeting() {
       if (this.lang === "Chinese") {
         return "Hi, I am Ruei-Yu.";
@@ -117,11 +134,11 @@ export default {
       }
       return "ABOUT";
     },
-    skills() {
+    portfolio() {
       if (this.lang === "Chinese") {
-        return "技能";
+        return "作品集";
       }
-      return "SKILLS";
+      return "PORTFOLIO";
     },
     contact() {
       if (this.lang === "Chinese") {

@@ -54,12 +54,13 @@ export default {
   },
   mounted() {
     const updateScroll = e => {
+      this.documentheight = document.body.scrollHeight;
       this.scrollY = window.scrollY;
     };
     this.updateScroll = updateScroll; // register for removal
+    updateScroll();
     window.addEventListener("scroll", updateScroll);
 
-    this.documentheight = document.body.scrollHeight;
     this.contactHeight = document.querySelector(
       "#contact-observe"
     ).offsetHeight;
@@ -71,6 +72,7 @@ export default {
       ).offsetHeight;
     };
     this.updateHeight = updateHeight; // register for removal
+    updateHeight();
     window.addEventListener("resize", updateHeight);
   },
   components: {

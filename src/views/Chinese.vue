@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <v-content>
+    <v-content :style="{ background: '#fafafa'}">
       <About></About>
-      <Skill></Skill>
+      <Portfolio></Portfolio>
       <Contact></Contact>
     </v-content>
   </v-app>
@@ -11,14 +11,14 @@
 <script>
 import Cover from "@/components/Cover.vue";
 import About from "@/components/About_CN.vue";
-import Skill from "@/components/Skill_CN.vue";
+import Portfolio from "@/components/Portfolio_CN.vue";
 import Contact from "@/components/Contact_CN.vue";
 export default {
   name: "App",
   components: {
     Cover,
     About,
-    Skill,
+    Portfolio,
     Contact
   }
 };
